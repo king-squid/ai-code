@@ -1,0 +1,21 @@
+import random, turtle
+
+turtle.screensize(canvwidth=350, canvheight=350,)
+turtle.speed(1)
+while True:
+    goto = [
+        (turtle.xcor() + 10, turtle.ycor()),
+        (turtle.xcor() - 10, turtle.ycor()),
+        (turtle.xcor(), turtle.ycor() + 10),
+        (turtle.xcor(), turtle.ycor() - 10)
+    ]
+    turtle.goto(goto[random.randint(0,3)])
+    print(turtle.xcor(), turtle.ycor())
+    if turtle.xcor() >= 350:
+        turtle.setx(324)
+    elif turtle.xcor() >= 350:
+        turtle.setx(-324)
+    elif turtle.ycor() >= 350:
+        turtle.sety(324)
+    elif turtle.ycor() >= -350:
+        turtle.sety(-324)
