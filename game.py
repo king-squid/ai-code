@@ -8,7 +8,7 @@ title("Turtle Keys")
 turtle.pencolor("red")
 move = Turtle()
 showturtle()
-c_turtle = turtle.Turtle()
+c_turtle = turtle.Turtle()     #it wont move the circle shape 
    
 
 
