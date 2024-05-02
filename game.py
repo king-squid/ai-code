@@ -1,38 +1,40 @@
 import turtle
-
-turtle.Turtle()
 from turtle import *
+
+move = turtle.Turtle()
+follow = turtle.Turtle()
+
 setup(600 , 600)
 Screen()
 title("Turtle Keys")
-turtle.pencolor("red")
-move = Turtle()
-showturtle()
-c_turtle = turtle.Turtle()     #it wont move the circle shape 
-   
-
-
-
 
 def k1():
-    c_turtle.shape('circle')
-    turtle.color("red")
-    move.forward(45)
+   move.forward(50)
+   a = move.getangle()
+   follow.goto(move.xcor, move.ycor)
+   follow.setheading(a)
+   follow.back(10)
 
 def k2():
-    c_turtle.shape('circle')
-    turtle.color("red")
-    move.left(45)
-
+   move.left(50)
+   a = move.getangle()
+   follow.goto(move.xcor, move.ycor)
+   follow.setheading(a)
+   follow.back(10)
+   
 def k3():
-    c_turtle.shape('circle')
-    turtle.color("red")
-    move.right(45)
-
+   move.right(50)
+   a = move.getangle()
+   follow.goto(move.xcor, move.ycor)
+   follow.setheading(a)
+   follow.back(10)
+   
 def k4():
-    c_turtle.shape('circle')
-    turtle.color("red")
-    move.back(45)
+   move.back(50)
+   a = move.getangle()
+   follow.goto(move.xcor, move.ycor)
+   follow.setheading(a)
+   follow.back(10)
 
 onkey(k1, "Up")
 onkey(k2, "Left")
